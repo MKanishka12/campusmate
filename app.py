@@ -9,20 +9,7 @@ from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from langchain_community.document_loaders import TextLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-# Google Gemini - only for generating answers
 from langchain_google_genai import ChatGoogleGenerativeAI
-
-# Local HuggingFace embeddings - no Google embedding quota
-from langchain_huggingface import HuggingFaceEmbeddings
-
-from langchain_chroma import Chroma
-
-from langchain_classic.chains import create_retrieval_chain
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
 
 
 # ============================================================
@@ -37,81 +24,42 @@ CORS(app)
 # GOOGLE API KEY
 # ============================================================
 
-# IMPORTANT:
-# Put your own Google AI Studio API key inside the quotes.
-# Do NOT share your API key publicly.
-
 load_dotenv()
 
 MY_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-
 print("API KEY LOADED:", bool(MY_API_KEY))
-print("API KEY LENGTH:", len(MY_API_KEY))
+
+if MY_API_KEY:
+    print("API KEY LENGTH:", len(MY_API_KEY))
+else:
+    print("WARNING: GOOGLE_API_KEY not found.")
 
 
 # ============================================================
-# 1. LOAD KNOWLEDGE BASE
+# 1. LOAD COLLEGE KNOWLEDGE BASE
 # ============================================================
 
-loader = TextLoader(
-    "data/college_info.txt",
-    encoding="utf-8"
-)
+KNOWLEDGE_FILE = "data/college_info.txt"
 
-docs = loader.load()
+try:
 
-print("Knowledge base loaded successfully.")
+    with open(KNOWLEDGE_FILE, "r", encoding="utf-8") as file:
+        college_info = file.read()
 
+    print("Knowledge base loaded successfully.")
+    print("Knowledge base characters:", len(college_info))
 
-# ============================================================
-# 2. SPLIT DOCUMENT INTO CHUNKS
-# ============================================================
+except Exception as e:
 
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=1200,
-    chunk_overlap=200
-)
+    print("ERROR loading knowledge base:")
+    print(e)
 
-splits = text_splitter.split_documents(docs)
-
-print("Document chunks created:", len(splits))
+    college_info = ""
 
 
 # ============================================================
-# 3. LOCAL HUGGINGFACE EMBEDDINGS
-# ============================================================
-
-print("Loading local embedding model...")
-
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
-
-print("Local embedding model loaded successfully.")
-
-
-# ============================================================
-# 4. CHROMA VECTOR DATABASE
-# ============================================================
-
-print("Creating Chroma vector database...")
-
-vectorstore = Chroma.from_documents(
-    documents=splits,
-    embedding=embeddings
-)
-
-# Retrieve 8 relevant chunks instead of 6
-retriever = vectorstore.as_retriever(
-    search_kwargs={"k": 8}
-)
-
-print("Chroma vector database ready.")
-
-
-# ============================================================
-# 5. GEMINI LLM
+# 2. GOOGLE GEMINI
 # ============================================================
 
 llm = ChatGoogleGenerativeAI(
@@ -122,81 +70,57 @@ llm = ChatGoogleGenerativeAI(
 
 
 # ============================================================
-# 6. SYSTEM PROMPT
+# 3. SYSTEM PROMPT
 # ============================================================
 
-system_prompt = (
-    "You are CampusMate, a student information assistant for "
-    "Kings College of Engineering (KCE).\n\n"
+SYSTEM_PROMPT = """
+You are CampusMate, a student information assistant for
+Kings College of Engineering (KCE).
 
-    "IMPORTANT RULES:\n"
+IMPORTANT RULES:
 
-    "1. Answer ONLY from the supplied KCE knowledge base.\n"
+1. Answer ONLY using the supplied KCE knowledge base.
 
-    "2. Never guess or invent information.\n"
+2. Never guess or invent information.
 
-    "3. Before answering, identify which section of the knowledge base "
-    "best matches the student's question.\n"
+3. If the requested information is not present in the
+knowledge base, say exactly:
 
-    "4. Ignore unrelated sections even if they contain similar words.\n"
+"I couldn't find that information in the current CampusMate knowledge base."
 
-    "5. For department questions, use the information belonging to that "
-    "specific department.\n"
+4. Do not use unrelated information merely because some
+words are similar.
 
-    "6. For faculty questions, provide faculty information from the "
-    "requested department only.\n"
+5. For department questions, answer using information
+belonging to that specific department.
 
-    "7. For facility questions, list the relevant facilities instead of "
-    "giving only a general statement.\n"
+6. For faculty questions, provide faculty information from
+the requested department only.
 
-    "8. If the user asks for a list, provide a complete list from the "
-    "available context.\n"
+7. For facility questions, list the relevant facilities
+instead of giving only a general statement.
 
-    "9. If the requested information is not present in the context, say "
-    "'I couldn't find that information in the current CampusMate knowledge base.'\n"
+8. If the user asks for a list, provide the complete list
+available in the knowledge base.
 
-    "10. Do not replace an unknown answer with a greeting.\n"
+9. If information is historical or year-specific, clearly
+mention the year.
 
-    "11. Do not answer a question using unrelated information merely because "
-    "some words are similar.\n"
+10. Keep answers simple, clear and student-friendly.
 
-    "12. If information is historical or year-specific, clearly mention "
-    "the year.\n"
+11. For location or address questions, give the complete
+location available in the knowledge base, including
+district, state and PIN code when available.
 
-    "13. Keep answers simple, clear and student-friendly.\n"
+12. Do not answer an unknown question with a greeting.
 
-    "14. For location or address questions, give the complete location "
-    "available in the knowledge base, including the district, state and "
-    "PIN code when available.\n\n"
+KCE KNOWLEDGE BASE:
 
-    "KCE KNOWLEDGE BASE:\n"
-    "{context}"
-)
-
-
-prompt = ChatPromptTemplate.from_messages([
-    ("system", system_prompt),
-    ("human", "{input}"),
-])
+""" + college_info
 
 
 # ============================================================
-# 7. RAG CHAIN
-# ============================================================
-
-question_answer_chain = create_stuff_documents_chain(
-    llm,
-    prompt
-)
-
-rag_chain = create_retrieval_chain(
-    retriever,
-    question_answer_chain
-)
-
-
-# ============================================================
-# 8. QUERY EXPANSION
+# 4. QUERY EXPANSION
 # ============================================================
 
 def expand_query(question):
@@ -224,7 +148,7 @@ def expand_query(question):
 
 
     # --------------------------------------------------------
-    # Replace only complete words
+    # Replace complete words
     # --------------------------------------------------------
 
     for short_name, full_name in replacements.items():
@@ -457,13 +381,42 @@ def expand_query(question):
 
 
 # ============================================================
-# 9. CHAT API
+# 5. CREATE GEMINI QUESTION
+# ============================================================
+
+def ask_gemini(user_question):
+
+    expanded_question = expand_query(user_question)
+
+    prompt = f"""
+{SYSTEM_PROMPT}
+
+STUDENT QUESTION:
+
+{user_question}
+
+ADDITIONAL SEARCH TERMS:
+
+{expanded_question}
+
+Using ONLY the KCE knowledge base above, answer the student's
+question clearly and accurately.
+"""
+
+    response = llm.invoke(prompt)
+
+    return response.content
+
+
+# ============================================================
+# 6. CHAT API
 # ============================================================
 
 @app.route("/chat", methods=["POST"])
 def chat():
 
     data = request.get_json(silent=True)
+
 
     if not data:
 
@@ -492,11 +445,11 @@ def chat():
         }), 400
 
 
-    # Expand the question before sending it to the retriever
-    expanded_question = expand_query(user_message)
-
     print("\nUSER QUESTION:")
     print(user_message)
+
+
+    expanded_question = expand_query(user_message)
 
     print("\nEXPANDED QUERY:")
     print(expanded_question)
@@ -504,15 +457,7 @@ def chat():
 
     try:
 
-        response = rag_chain.invoke({
-            "input": expanded_question
-        })
-
-
-        answer = response.get(
-            "answer",
-            "I couldn't find that information in the current CampusMate knowledge base."
-        )
+        answer = ask_gemini(user_message)
 
 
         print("\nCAMPUSMATE ANSWER:")
@@ -550,6 +495,23 @@ def chat():
 
 
         # ----------------------------------------------------
+        # API key error
+        # ----------------------------------------------------
+
+        if (
+            "API key" in error_message
+            or "API_KEY_INVALID" in error_message
+            or "invalid api key" in error_message.lower()
+        ):
+
+            return jsonify({
+                "answer":
+                "⚠️ CampusMate could not connect to Gemini. "
+                "Please check the API key configuration."
+            }), 500
+
+
+        # ----------------------------------------------------
         # Other errors
         # ----------------------------------------------------
 
@@ -560,7 +522,7 @@ def chat():
 
 
 # ============================================================
-# 10. START SERVER
+# 7. START SERVER
 # ============================================================
 
 if __name__ == "__main__":
