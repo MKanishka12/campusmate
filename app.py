@@ -5,8 +5,7 @@ import os
 import re
 
 from dotenv import load_dotenv
-
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -411,6 +410,9 @@ question clearly and accurately.
 # ============================================================
 # 6. CHAT API
 # ============================================================
+@app.route("/")
+def home():
+    return send_from_directory(".", "index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat():
