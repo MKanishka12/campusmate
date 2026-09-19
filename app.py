@@ -414,7 +414,7 @@ question clearly and accurately.
 def home():
     return send_from_directory(".", "index.html")
 
-  @app.route("/style.css")
+@app.route("/style.css")
 def style():
     return send_from_directory(".", "style.css")
 
