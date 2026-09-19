@@ -414,6 +414,20 @@ question clearly and accurately.
 def home():
     return send_from_directory(".", "index.html")
 
+  @app.route("/style.css")
+def style():
+    return send_from_directory(".", "style.css")
+
+
+@app.route("/script.js")
+def script():
+    return send_from_directory(".", "script.js")
+
+
+@app.route("/assets/<path:filename>")
+def assets(filename):
+    return send_from_directory("assets", filename)  
+
 @app.route("/chat", methods=["POST"])
 def chat():
 
