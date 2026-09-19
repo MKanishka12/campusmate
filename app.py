@@ -126,7 +126,6 @@ def expand_query(question):
 
     q = question.lower().strip()
 
-
     # --------------------------------------------------------
     # Department abbreviations
     # --------------------------------------------------------
@@ -145,7 +144,6 @@ def expand_query(question):
         "s and h": "science and humanities"
     }
 
-
     # --------------------------------------------------------
     # Replace complete words
     # --------------------------------------------------------
@@ -157,7 +155,6 @@ def expand_query(question):
             full_name,
             q
         )
-
 
     # --------------------------------------------------------
     # Department / Course questions
@@ -194,7 +191,6 @@ def expand_query(question):
         B.Tech
         """
 
-
     # --------------------------------------------------------
     # HOD questions
     # --------------------------------------------------------
@@ -210,7 +206,6 @@ def expand_query(question):
         department head
         current HOD
         """
-
 
     # --------------------------------------------------------
     # Faculty / Staff questions
@@ -232,7 +227,6 @@ def expand_query(question):
         assistant professors
         department faculty
         """
-
 
     # --------------------------------------------------------
     # Hostel questions
@@ -258,7 +252,6 @@ def expand_query(question):
         purified water
         bathrooms
         """
-
 
     # --------------------------------------------------------
     # Library questions
@@ -289,7 +282,6 @@ def expand_query(question):
         reading room
         """
 
-
     # --------------------------------------------------------
     # Placement questions
     # --------------------------------------------------------
@@ -313,7 +305,6 @@ def expand_query(question):
         industry interaction
         recruitment drives
         """
-
 
     # --------------------------------------------------------
     # Scholarship questions
@@ -339,7 +330,6 @@ def expand_query(question):
         Best Library User Award
         Anna University rank holder
         """
-
 
     # --------------------------------------------------------
     # Location / Address questions
@@ -375,7 +365,6 @@ def expand_query(question):
         Pudukkottai Highway
         """
 
-
     return q
 
 
@@ -408,31 +397,53 @@ question clearly and accurately.
 
 
 # ============================================================
-# 6. CHAT API
+# 6. FRONTEND ROUTES
 # ============================================================
+
 @app.route("/")
 def home():
-    return send_from_directory(".", "index.html")
+
+    return send_from_directory(
+        ".",
+        "index.html"
+    )
+
 
 @app.route("/style.css")
 def style():
-    return send_from_directory(".", "style.css")
+
+    return send_from_directory(
+        ".",
+        "style.css"
+    )
 
 
 @app.route("/script.js")
 def script():
-    return send_from_directory(".", "script.js")
+
+    return send_from_directory(
+        ".",
+        "script.js"
+    )
 
 
 @app.route("/assets/<path:filename>")
 def assets(filename):
-    return send_from_directory("assets", filename)  
+
+    return send_from_directory(
+        "assets",
+        filename
+    )
+
+
+# ============================================================
+# 7. CHAT API
+# ============================================================
 
 @app.route("/chat", methods=["POST"])
 def chat():
 
     data = request.get_json(silent=True)
-
 
     if not data:
 
@@ -440,9 +451,7 @@ def chat():
             "answer": "Please ask a valid question."
         }), 400
 
-
     user_message = data.get("message", "")
-
 
     if not isinstance(user_message, str):
 
@@ -450,9 +459,7 @@ def chat():
             "answer": "Please ask a valid question."
         }), 400
 
-
     user_message = user_message.strip()
-
 
     if not user_message:
 
@@ -460,30 +467,24 @@ def chat():
             "answer": "Please ask a valid question."
         }), 400
 
-
     print("\nUSER QUESTION:")
     print(user_message)
-
 
     expanded_question = expand_query(user_message)
 
     print("\nEXPANDED QUERY:")
     print(expanded_question)
 
-
     try:
 
         answer = ask_gemini(user_message)
 
-
         print("\nCAMPUSMATE ANSWER:")
         print(answer)
-
 
         return jsonify({
             "answer": answer
         })
-
 
     except Exception as e:
 
@@ -491,7 +492,6 @@ def chat():
 
         print("\nCHAT ERROR:")
         print(error_message)
-
 
         # ----------------------------------------------------
         # Gemini quota error
@@ -509,7 +509,6 @@ def chat():
                 "Please try again later or use another API key."
             }), 429
 
-
         # ----------------------------------------------------
         # API key error
         # ----------------------------------------------------
@@ -526,7 +525,6 @@ def chat():
                 "Please check the API key configuration."
             }), 500
 
-
         # ----------------------------------------------------
         # Other errors
         # ----------------------------------------------------
@@ -538,7 +536,7 @@ def chat():
 
 
 # ============================================================
-# 7. START SERVER
+# 8. START SERVER
 # ============================================================
 
 if __name__ == "__main__":
