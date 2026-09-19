@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusMate | College Information Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <img src="assets/kings.jpeg" alt="Kings College Logo">
+            </div>
+
+            <div>
+                <h1>CampusMate</h1>
+                <span>College Assistant</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-divider"></div>
+
+
+        <div class="sidebar-title">
+            EXPLORE
+        </div>
+
+
+        <button class="side-option active">
+            <span>💬</span>
+            <span>Campus Assistant</span>
+        </button>
+
+        <button class="side-option" onclick="askQuickQuestion('What courses are offered?')">
+            <span>🎓</span>
+            <span>Courses</span>
+        </button>
+
+        <button class="side-option" onclick="askQuickQuestion('Tell me about the college library.')">
+            <span>📚</span>
+            <span>Library</span>
+        </button>
+
+        <button class="side-option" onclick="askQuickQuestion('Tell me about placement opportunities.')">
+            <span>💼</span>
+            <span>Placements</span>
+        </button>
+
+        <button class="side-option" onclick="askQuickQuestion('Does the college provide hostel facilities?')">
+            <span>🏠</span>
+            <span>Hostel</span>
+        </button>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="college-mini">
+
+                <div class="mini-logo">
+                    <img src="assets/kings.jpeg" alt="College">
+                </div>
+
+                <div>
+                    <strong>Kings College</strong>
+                    <span>of Engineering</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN AREA ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+
+                <img src="assets/kings.jpeg" alt="College">
+
+                <div>
+                    <strong>CampusMate</strong>
+                    <span>College Assistant</span>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="online-status">
+
+                    <span class="online-dot"></span>
+
+                    <span>Assistant Online</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CHAT AREA ================= -->
+
+        <section class="chat-area" id="chat-window">
+
+
+            <!-- WELCOME SCREEN -->
+
+            <div class="welcome-screen">
+
+                <div class="welcome-logo">
+
+                    <img src="assets/kings.jpeg" alt="Kings College Logo">
+
+                    <span class="sparkle sparkle-one">✦</span>
+                    <span class="sparkle sparkle-two">✦</span>
+
+                </div>
+
+
+                <div class="welcome-badge">
+                    ✨ SMART CAMPUS ASSISTANT
+                </div>
+
+
+                <h2>
+                    Hello! I'm <span>CampusMate.</span>
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Your smart companion for exploring
+                    <strong>Kings College of Engineering.</strong>
+
+                    Ask questions and get quick information
+                    about the college, departments, facilities
+                    and more.
+
+                </p>
+
+
+                <div class="welcome-features">
+
+                    <div>
+                        <span>⚡</span>
+                        <p>Quick Answers</p>
+                    </div>
+
+                    <div>
+                        <span>🎓</span>
+                        <p>College Information</p>
+                    </div>
+
+                    <div>
+                        <span>🔎</span>
+                        <p>Smart Search</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= SUGGESTIONS ================= -->
+
+        <section class="suggestions-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-label">GET STARTED</span>
+                    <h3>What would you like to know?</h3>
+                </div>
+
+            </div>
+
+
+            <div class="suggestions-grid">
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="Where is the college located?"
+                >
+
+                    <div class="suggestion-icon location">
+                        📍
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>College Location</strong>
+                        <span>Find address & location</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="What courses are offered?"
+                >
+
+                    <div class="suggestion-icon course">
+                        🎓
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Courses & Departments</strong>
+                        <span>Explore academic programs</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="Does the college have a library?"
+                >
+
+                    <div class="suggestion-icon library">
+                        📚
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Library</strong>
+                        <span>Books & learning resources</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="How can I contact the college?"
+                >
+
+                    <div class="suggestion-icon contact">
+                        ☎
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Contact</strong>
+                        <span>Phone, email & details</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="Does the college provide hostel facilities?"
+                >
+
+                    <div class="suggestion-icon hostel">
+                        🏠
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Hostel Facilities</strong>
+                        <span>Accommodation information</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="Tell me about the placement opportunities at the college."
+                >
+
+                    <div class="suggestion-icon placement">
+                        💼
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Placements</strong>
+                        <span>Career opportunities</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="Who are the faculty members at the college?"
+                >
+
+                    <div class="suggestion-icon faculty">
+                        👨‍🏫
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Faculty</strong>
+                        <span>Faculty information</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <button
+                    class="suggestion-card"
+                    data-question="What scholarships are available for students?"
+                >
+
+                    <div class="suggestion-icon scholarship">
+                        💰
+                    </div>
+
+                    <div class="suggestion-content">
+                        <strong>Scholarships</strong>
+                        <span>Student financial support</span>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INPUT ================= -->
+
+        <div class="input-wrapper">
+
+            <div class="input-box">
+
+                <span class="input-icon">✦</span>
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Ask CampusMate anything..."
+                    autocomplete="off"
+                >
+
+                <button id="send-btn" aria-label="Send message">
+                    <span>➤</span>
+                </button>
+
+            </div>
+
+
+            <button id="clear-btn" class="clear-button">
+                ↻ Clear chat
+            </button>
+
+
+            <p class="input-note">
+                CampusMate can answer questions from the college knowledge base.
+            </p>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

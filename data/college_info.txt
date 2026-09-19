@@ -1,0 +1,1483 @@
+=== KINGS COLLEGE OF ENGINEERING (KCE) — MASTER KNOWLEDGE BASE ===
+
+IMPORTANT:
+This file contains student-facing information about Kings College of Engineering.
+CampusMate must answer questions using the information available in this knowledge base.
+Do not invent names, numbers, fees, placement packages, dates, or facilities that are not present here.
+For historical information, clearly indicate that it is historical.
+For information that can change frequently, such as events, admissions, placement drives, office holders, and announcements, mention that students should verify the latest official announcement when appropriate.
+
+==================================================
+
+1. COLLEGE OVERVIEW
+   ==================================================
+
+College Name:
+Kings College of Engineering (KCE)
+
+Founded:
+2001
+
+Management:
+Raj Educational Trust (RET), Chennai.
+
+Purpose:
+KCE was founded with the aim of providing quality technical education, particularly to economically disadvantaged and rural communities.
+
+Approval:
+Approved by the All India Council for Technical Education (AICTE), New Delhi.
+
+Affiliation:
+Affiliated to Anna University, Chennai.
+
+Accreditation / Status:
+KCE is a NAAC accredited institution.
+KCE has Autonomous Status conferred by UGC, New Delhi and Anna University, Chennai.
+The institution is also described on its official website as ISO certified.
+
+Location:
+Punalkulam, Near Thanjavur,
+Gandarvakottai Taluk,
+Pudukkottai District,
+Tamil Nadu – 613303, India.
+
+Campus location:
+The campus is approximately 10 km from Thanjavur New Bus Stand on the Pudukkottai Highway.
+
+Campus area:
+Approximately 50 acres.
+
+Official phone:
++91-6380989024
+
+Official email:
+[contact@kingsengg.edu.in](mailto:contact@kingsengg.edu.in)
+
+Official website:
+[www.kingsengg.edu.in](http://www.kingsengg.edu.in)
+
+Admission enquiry:
++91-6380989024
+
+Information Centre:
+Kings College of Engineering,
+85/26, 3rd Cross,
+Arulanandha Nagar,
+VOC Nagar,
+Thanjavur – 613007,
+Tamil Nadu, India.
+
+==================================================
+2. VISION AND MISSION
+=====================
+
+CampusMate should describe the institution's overall objective as providing quality technical education and developing technically competent, professionally capable and socially responsible students.
+
+The institution gives importance to:
+
+* Quality technical education
+* Employability
+* Research and innovation
+* Professional development
+* Rural and economically disadvantaged communities
+* Industry interaction
+* Student development
+* Social responsibility
+
+==================================================
+3. PRINCIPAL
+============
+
+Current Principal:
+Dr. J. Arputha Vijaya Selvi, B.E., M.E., Ph.D.
+
+Qualifications:
+
+* Ph.D. (Full Time), NIT Tiruchirappalli
+* M.E. Communication Systems, NIT Tiruchirappalli
+* B.E. Electronics and Communication Engineering, Government College of Engineering, Tirunelveli
+
+Research interests include:
+
+* Signal Processing
+* Wireless Sensor Networks
+* Free Space Optical Communication
+* VLSI Design
+
+She is a recognized research supervisor under Anna University in Information and Communication Engineering.
+
+She has held academic and administrative positions including:
+
+* Lecturer / Senior Lecturer at SASTRA University
+* Principal at Idhaya College of Engineering
+* Professor and Head of ECE at KCE
+* Principal (in-charge) at KCE
+* Dean – Research and Development at KCE
+* Principal of KCE since July 2017
+
+==================================================
+4. CURRENT ACADEMIC COUNCIL / SENIOR ACADEMIC ROLES
+===================================================
+
+Chairman / Principal:
+Dr. J. Arputha Vijaya Selvi
+
+Head – Civil Engineering:
+Dr. R. Saravanan
+
+Head – Computer Science and Engineering:
+Dr. S.M. Uma
+
+Head – Electronics and Communication Engineering:
+Mrs. N. Mangaiavarkarasi
+
+Head – Electrical and Electronics Engineering:
+Mr. R. Sundaramoorthi
+
+Head – Mechanical Engineering:
+Dr. T. Pushparaj
+
+Head – Science and Humanities:
+Dr. V. Sureshkumar
+
+Head – Academic Courses:
+Dr. K. Abhirami
+
+Head – Student Affairs:
+Mrs. N. Mangaiavarkarasi
+
+Head – Centre for Promotion of Research:
+Dr. P.P. Shantharaman
+
+==================================================
+5. COURSES OFFERED
+==================
+
+UNDERGRADUATE PROGRAMMES:
+
+1. B.E. Civil Engineering
+   Established: 2010
+   Intake: 30
+
+2. B.E. Computer Science and Engineering
+   Established: 2001
+   Intake: 120
+
+3. B.E. Electronics and Communication Engineering
+   Established: 2001
+   Intake: 120
+
+4. B.E. Electrical and Electronics Engineering
+   Established: 2001
+   Intake: 60
+
+5. B.E. Mechanical Engineering
+   Established: 2006
+   Intake: 60
+
+6. B.Tech. Artificial Intelligence and Data Science
+   Established: 2023
+   Intake: 60
+
+7. B.Tech. Information Technology
+   Established: 2024
+   Intake: 30
+
+POSTGRADUATE PROGRAMMES:
+
+1. M.E. Computer Science and Engineering
+   Established: 2008
+   Intake: 09
+
+2. M.E. Power Electronics and Drives
+   Established: 2008
+   Intake: 09
+
+3. M.E. Thermal Engineering
+   Established: 2010
+   Intake: 09
+
+4. M.E. VLSI Design
+   Established: 2008
+   Intake: 09
+
+5. M.B.A. Master of Business Administration
+   Established: 2026
+   Intake: 60
+
+Ph.D. PROGRAMMES:
+
+1. Ph.D. Mechanical Engineering
+   Established: 2013
+
+2. Ph.D. Electronics and Communication Engineering
+   Established: 2013
+
+==================================================
+6. COMPUTER SCIENCE AND ENGINEERING
+===================================
+
+Department:
+B.E. Computer Science and Engineering
+
+Established:
+2001
+
+Intake:
+120
+
+Current HOD:
+Dr. S.M. Uma
+
+CSE Faculty:
+
+1. Dr. S.M. Uma
+   Designation: Associate Professor
+   Qualification: Ph.D.
+   Specialization: Data Mining
+
+2. Dr. K. Abhirami
+   Designation: Associate Professor
+   Qualification: Ph.D.
+   Specialization: Artificial Intelligence
+
+3. Dr. S. Rajarajan
+   Designation: Associate Professor
+   Qualification: Ph.D.
+   Specialization: Deep Learning, Cyber Security
+
+4. Dr. S. Kannan
+   Designation: Professor
+   Qualification: Ph.D.
+   Specialization: Data Mining, Data Science
+
+5. Mr. M. Arun
+   Designation: Assistant Professor
+   Qualification: M.E., Ph.D. pursuing
+   Specialization: Affective Computing
+
+6. Ms. S. Priyadharshini
+   Designation: Assistant Professor
+   Qualification: M.Tech.
+   Specialization: Artificial Intelligence
+
+7. Ms. N. Dhamayandhi
+   Designation: Assistant Professor
+   Qualification: M.E., Ph.D. pursuing
+   Specialization: AI and Machine Learning
+
+8. Ms. B. Bavithra
+   Designation: Assistant Professor
+   Qualification: M.E., Ph.D. pursuing
+   Specialization: AI and Machine Learning
+
+9. Ms. S. Abikayil Aarthi
+   Designation: Assistant Professor
+   Qualification: M.Tech., Ph.D. pursuing
+   Specialization: AI and Machine Learning, Deep Learning
+
+CSE Laboratories:
+
+* Advanced Programming Laboratory
+* DBMS and RDBMS Laboratory
+* Conventional Programming Laboratory
+* Unix Laboratory
+* Multimedia and Image Processing Laboratory
+* Internet Laboratory
+* Peripherals and Interfacing Laboratory
+* Hardware Maintenance Laboratory
+* Software Development Laboratory
+* Grid and Cloud Computing Laboratory
+* Internet Security Laboratory
+
+CSE academic areas include:
+
+* Programming
+* Data Structures
+* Database Management
+* Artificial Intelligence
+* Machine Learning
+* Deep Learning
+* Data Science
+* Cyber Security
+* Cloud Computing
+* Software Development
+* Computer Networks
+* Internet technologies
+
+==================================================
+7. INFORMATION TECHNOLOGY
+=========================
+
+Department:
+B.Tech. Information Technology
+
+Established:
+2024
+
+Intake:
+30
+
+Current HOD:
+Dr. S.M. Uma
+
+Faculty:
+
+1. Dr. S.M. Uma
+   Associate Professor
+   Ph.D.
+   Specialization: Data Mining
+
+2. Ms. B. Sangeetha
+   Academic Coordinator / Assistant Professor
+   M.Tech., Ph.D. pursuing
+   Specialization: Cloud Computing, Machine Learning, IoT
+
+3. Ms. M. Vidhya
+   Assistant Professor
+   M.E.
+   Specialization: Cloud Computing
+
+4. Ms. S. Nirmala
+   Assistant Professor
+   M.Tech.
+   Specialization: AI, Machine Learning
+
+5. Ms. V. Gayathri
+   Assistant Professor
+   M.Tech.
+   Specialization: Software Engineering
+
+6. Ms. T. Sindhu
+   Assistant Professor
+   M.E.
+   Specialization: AI and Machine Learning
+
+The IT department focuses on:
+
+* Programming
+* Computing
+* Data management
+* Networking
+* Cyber security
+* Cloud computing
+* Artificial intelligence
+* Machine learning
+* Emerging technologies
+
+The department has a state-of-the-art laboratory facility with more than 350 computers.
+
+==================================================
+8. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE
+===========================================
+
+Department:
+B.Tech. Artificial Intelligence and Data Science
+
+Established:
+2023
+
+Intake:
+60
+
+Current HOD:
+Dr. S.M. Uma
+
+Faculty includes:
+
+* Dr. S.M. Uma — Associate Professor / Head — Data Mining
+* Ms. B. Sangeetha — Assistant Professor / Academic Coordinator — Cloud Computing, ML, IoT
+
+Major areas:
+
+* Artificial Intelligence
+* Data Science
+* Machine Learning
+* Deep Learning
+* Natural Language Processing
+* Computer Vision
+* Big Data
+* Cloud Computing
+* Advanced computing
+* Industry-oriented tools
+
+==================================================
+9. ELECTRONICS AND COMMUNICATION ENGINEERING
+============================================
+
+Department:
+B.E. Electronics and Communication Engineering
+
+Established:
+2001
+
+Intake:
+120
+
+Current HOD:
+Mrs. N. Mangaiavarkarasi
+
+Faculty / academic members include:
+
+1. Dr. J. Arputha Vijaya Selvi
+   Professor
+   Ph.D.
+   Specialization: Signal Processing, Wireless Sensor Networks, Free Space Optical Communication
+
+2. Mrs. N. Mangaiavarkarasi
+   Assistant Professor
+   M.E., Ph.D. pursuing
+   Specialization: Communication Systems
+
+3. Mr. K. Sudarsanan
+   Assistant Professor
+   M.E., Ph.D. pursuing
+   Specialization: Optical Communication
+
+ECE Laboratories:
+
+* Electronic Circuits
+* Digital Electronics
+* Microprocessors and Microcontrollers
+* Linear Integrated Circuits
+* Communication
+* Digital Signal Processing
+* Networks
+* Optical and Microwave
+* VLSI
+* Embedded Systems
+
+ECE activities include:
+
+* RF Systems and Design
+* 5G and Industry 5.0
+* Artificial Intelligence
+* Federated Learning
+* Embedded Systems
+* Li-Fi
+* IoT
+* Machine Learning and Deep Learning
+* Career guidance
+* Research promotion
+* Electronics Club
+* Technical workshops
+* Project activities
+
+Published 2025-26 placement highlight:
+44 final-year ECE students were reported as placed with an average package of approximately ₹2.3 lakh per year.
+
+This figure is department-specific and academic-year-specific and must not be presented as the current college-wide placement rate.
+
+==================================================
+10. ELECTRICAL AND ELECTRONICS ENGINEERING
+==========================================
+
+Department:
+B.E. Electrical and Electronics Engineering
+
+Established:
+2001
+
+Intake:
+60
+
+Current HOD:
+Mr. R. Sundaramoorthi
+
+Faculty:
+
+1. Dr. S. Sivakumar
+   Professor
+   M.Tech., Ph.D.
+   Specialization: Power System and Project Management
+
+2. Dr. A. Albert Martin Ruban
+   Professor
+   M.E., Ph.D.
+   Specialization: Renewable Energy, Smart Grid, Wireless Network
+
+3. Mr. R. Sundaramoorthi
+   Assistant Professor
+   M.E., Ph.D. pursuing
+   Specialization: Power Electronics, Electrical Drives, Hybrid Energy
+
+4. Dr. P. Narasimman
+   Associate Professor
+   M.E., Ph.D.
+   Specialization: Power Electronics and Drives, Control, EMC
+
+5. Mr. J. Arokiaraj
+   Assistant Professor
+   M.E., Ph.D. pursuing
+   Specialization: Electrical Machines, Smart Grid, Power Electronics, Power Quality
+
+6. Mr. S.R. Karthikeyan
+   Assistant Professor
+   M.E., Ph.D. pursuing
+   Specialization: Power Electronics and Drives, FACTS, Power Quality, Electrical Traction
+
+EEE Laboratories:
+
+* Electrical Machines
+* Power Electronics
+* Control Systems
+* Measurements and Instrumentation
+* Power System Simulation
+* Electrical Circuits
+* Electrical Workshop
+
+==================================================
+11. MECHANICAL ENGINEERING
+==========================
+
+Department:
+B.E. Mechanical Engineering
+
+Established:
+2006
+
+Intake:
+60
+
+Current HOD:
+Dr. T. Pushparaj
+
+Faculty:
+
+1. Dr. T. Pushparaj
+   Professor and Head
+   B.E., M.E., Ph.D.
+   Areas: Alternative Fuels, Emission Control, Solar Energy, Heat Exchangers, IC Engines, MMC, EV
+
+2. Dr. P.P. Shantharaman
+   Professor
+   B.E., M.E., Ph.D.
+   Areas: Thermal Engineering, Nanocomposites, Optimization
+
+3. Dr. R. Shankar
+   Associate Professor
+   B.E., M.E., Ph.D.
+   Areas: Material Characterization, Surface Coating, Optimization
+
+Mechanical Engineering has an Anna University recognized research centre.
+
+==================================================
+12. CIVIL ENGINEERING
+=====================
+
+Department:
+B.E. Civil Engineering
+
+Established:
+2010
+
+Intake:
+30
+
+Current HOD:
+Dr. R. Saravanan
+
+Faculty:
+
+1. Dr. R. Saravanan — Professor
+2. Mr. R. Sundharam — Assistant Professor
+3. Mr. K. Arun — Assistant Professor-II
+4. Mr. S. Kamaraj — Assistant Professor-II
+5. Mr. D. Nandakumar — Assistant Professor
+6. Mr. A. Sagaya Albert — Assistant Professor
+7. Mr. K. Sri Ram Gopal — Assistant Professor
+8. Ms. R. Umamaheswari — Assistant Professor
+9. Ms. K. Kalpana — Assistant Professor
+10. Mr. R. Natarajan — Assistant Professor
+
+Supporting staff:
+
+* Mr. P. Thamaraikannan — Attender
+* Ms. S. Anitha — Lab Technician
+
+Civil Laboratories:
+
+* Strength of Materials
+* Fluid Mechanics and Machinery
+* Soil Mechanics
+* Surveying
+* Concrete and Highway Engineering
+* Environmental Engineering
+* Computer Aided Design
+
+Additional Civil facilities:
+
+* Material Testing Laboratory
+* Hydraulic Engineering Laboratory
+* Geotechnical Engineering Laboratory
+* Surveying Laboratory
+* Environmental Engineering Laboratory
+* Highway Engineering Laboratory
+* Computer Aided Building Drawing and Drafting Laboratory
+* Smart Classroom
+* ICT Classroom
+* Seminar Hall
+* Department Library
+
+==================================================
+13. SCIENCE AND HUMANITIES
+==========================
+
+Department:
+Science and Humanities
+
+Established:
+2001
+
+Current HOD:
+Dr. V. Sureshkumar
+
+Major subjects:
+
+* Mathematics
+* Physics
+* Chemistry
+* English
+* Tamil
+* Environmental Science
+* Python
+
+Student support activities:
+
+* Bridge courses in Physics
+* Bridge courses in Mathematics
+* Python bridge courses
+* Communication skills orientation
+* Paper presentation
+* Project expo
+* English language training
+
+English Language Lab:
+The department provides an English Language Lab with multimedia-based learning and support for examinations such as TOEFL, GRE and IELTS.
+
+Laboratories:
+
+* Chemistry Laboratory I
+* Chemistry Laboratory II
+* Physics Laboratory I
+* Physics Laboratory II
+* Communication and Soft Skills Laboratory
+
+Chemistry research areas include:
+
+* Corrosion
+* Polymer Chemistry
+* Kinetics and Adsorption
+* Water Treatment
+* Environmental Science
+* Electrochemistry
+* Nanotechnology
+
+Faculty listed on the department page include:
+
+* Dr. V. Sureshkumar — Professor and Head — Chemistry
+* Dr. S. Udayakumar — Associate Professor — Chemistry
+* Dr. P. Saravanan — Associate Professor — Chemistry
+
+==================================================
+14. CENTRAL LIBRARY
+===================
+
+Library:
+Central Library of Kings College of Engineering
+
+Area:
+Approximately 1164 square metres.
+
+The library is fully computerized.
+
+Library collection:
+The official library page states that the collection has grown to approximately 33,431 books.
+A detailed library table published on the site dated 31-05-2026 reports:
+
+* 12,256 titles
+* 33,890 volumes
+
+Because the website contains slightly different collection figures in different sections, CampusMate should say "more than 33,000 books" when an exact figure is not required.
+
+Other resources:
+
+* Approximately 2,173 CD-ROMs
+* 68 national printed journals
+* 1,843 online national/international journals and magazines
+* 8 daily newspapers
+* 475 back volumes of journals and magazines
+* Department-specific book collections
+* TOEFL books
+* GRE books
+* GATE books
+* UPSC books
+* DELNET membership
+* National Digital Library access
+* IEEE journal back-volume collections
+* AICTE-compliant e-resources
+* NPTEL video facility
+* OPAC
+* Reading room
+* User assistance
+
+The library provides access to digital and academic resources for students, staff and research scholars.
+
+==================================================
+15. INTERNET AND COMPUTING FACILITIES
+=====================================
+
+KCE provides campus-wide wireless computing/network facilities.
+
+Published facilities include:
+
+* Campus-wide wireless network
+* Dedicated Internet laboratory
+* Approximately 600 LAN-connected systems
+* Internet access beyond regular classroom hours
+* High-speed internet connectivity
+* Campus intranet connecting departments
+* Internet centre
+* Printing facilities
+* Scanning facilities
+* Online learning resources
+
+An older institutional report also describes Wi-Fi coverage across the campus and hostels.
+
+==================================================
+16. INFRASTRUCTURE
+==================
+
+Campus area:
+Approximately 50 acres.
+
+The campus includes:
+
+* Classrooms
+* Smart / ICT-enabled learning spaces
+* Laboratories
+* Central library
+* Department libraries
+* Auditorium facilities
+* Hostels
+* Cafeteria
+* Computer laboratories
+* Health centre
+* Sports facilities
+* Recreation facilities
+
+Campus environment:
+The official website describes the campus as calm, landscaped and suitable for learning.
+
+Drinking water:
+Water purification units are installed on floors of campus blocks.
+
+Power backup:
+Standby generators of:
+
+* 250 kVA
+* 125 kVA
+
+Cafeteria:
+A cafeteria is available for staff, students and visitors.
+A 12,000 sq.ft. canteen block is also reported.
+
+Healthcare:
+Round-the-clock health-centre facilities are available with a visiting doctor and full-time female nurse.
+
+==================================================
+17. HOSTEL
+==========
+
+Separate hostel facilities are available for:
+
+* Boys
+* Girls
+
+Hostel facilities include:
+
+* Hygienic rooms
+* Good ventilation
+* Good lighting
+* Vegetarian mess
+* Non-vegetarian mess
+* Purified drinking water
+* Transparent accounting system
+* 24-hour water supply
+* Hygienic bathrooms
+* Separate drying rooms
+* Individual study facilities
+* Table
+* Chair
+* Shelf
+* Power source
+* Telephone facilities
+* Dispensary
+* Medical facilities
+* Reading rooms
+* Newspapers
+* Weekly magazines
+* Monthly magazines
+* Recreation halls
+* Television
+* Carrom
+* Chess
+* Badminton court
+* Volleyball court
+* Gym for boys and girls
+* Post office
+* Canteen
+* Indoor stadium
+
+==================================================
+18. SPORTS
+==========
+
+Sports facilities include:
+
+* Basketball
+* Volleyball
+* Tennis
+* Ball badminton
+* Cricket
+* Football
+* Hockey
+* Table tennis
+* Kabaddi
+* Handball
+* Badminton
+* Chess
+* Carrom
+* 400 metre track
+* Indoor multi-purpose facilities
+
+Published infrastructure includes:
+
+* Floodlit basketball courts
+* Indoor wooden-floor shuttle facility
+* Full-size cricket ground
+* Football areas
+* Tennis courts
+* Volleyball courts
+* Kabaddi courts
+* Handball court
+* Hockey court
+* Indoor multi-purpose facility
+
+Physical Education:
+Director / sports staff coordinate sports and games activities.
+
+Students can participate in inter-collegiate and other sports activities and competitions.
+
+==================================================
+19. TRANSPORT
+=============
+
+College buses operate between the college and major towns / surrounding areas.
+
+Published routes include areas such as:
+
+* Thanjavur
+* Kumbakonam
+* Pattukottai
+* Thiruvaiyaru
+* Thirukkattupalli
+* Ammapet
+* Gandarvakottai
+* Other surrounding locations
+
+Transport availability and routes may change.
+Students should verify the current transport timetable and route list with the college.
+
+==================================================
+20. TRAINING AND PLACEMENT
+==========================
+
+Department:
+Training and Placement Cell
+
+Current Head:
+Prof. Dr. S. Sivakumar
+Qualification:
+M.Tech., Ph.D.
+
+The Training and Placement Cell works throughout the academic year to improve students' career readiness.
+
+Major activities:
+
+* Campus recruitment
+* Career guidance
+* Orientation programmes
+* Soft skills training
+* Aptitude training
+* Technical preparation
+* Industry interaction
+* Industrial visits
+* Project work
+* Analytical skills development
+* Professional confidence development
+* Recruitment drives
+* Employer interaction
+
+A separate syllabus for:
+
+* Soft Skills
+* Aptitude
+
+is provided across semesters.
+
+Students receive training manuals and structured preparation.
+
+T&P faculty include:
+
+* Dr. S. Sivakumar
+* Dr. B. Barankumar
+* Ms. P. Suganya
+* Dr. P. Nadimuthu
+* Mrs. S. Deepika
+* Ms. J.K. Varshini
+* Ms. R. Shantha Sheela
+
+Recent published recruitment events have included companies such as:
+
+* Besten Engineers and Consultants
+* AGF Tecnik India
+* Webberax Solutions
+* L.G. Balakrishnan & Bros.
+* Aquasub
+* Logskim
+* Mitsuba India
+
+These are examples of published recruitment events and should NOT be interpreted as guaranteed future recruiters.
+
+Historical placement records are available on the official T&P page.
+Do not present old placement numbers as current placement statistics.
+
+==================================================
+21. RESEARCH AND DEVELOPMENT
+============================
+
+Research and Development section:
+Established with state-of-the-art laboratories in 2008.
+
+Research centres recognized by Anna University include:
+
+* Electronics and Communication Engineering
+* Mechanical Engineering
+* Electrical and Electronics Engineering
+
+Research activities involve emerging technologies and collaboration with industry and funding agencies.
+
+Funding / project examples published by KCE include:
+
+1. Mono-pulse and Artificial Neural Networks based steering technique for Free Space Line of Optical Communication
+   Funding agency: DRDO
+   Amount: ₹30,55,600
+   Status: Completed
+
+2. SMEs and Innovation: A case study for Tamil Nadu State
+   Funding agency: Ministry of Communications and IT
+   Amount: ₹33,44,000
+   Status: Completed
+
+3. Modernization of Analog and Digital Electronics Laboratory
+   Funding agency: AICTE
+   Amount: ₹10,00,000
+   Status: Completed
+
+4. MODROBS for DSP Laboratory
+   Funding agency: AICTE
+   Amount: ₹7,39,947
+   Status: Completed
+
+5. Innovation Promotion Scheme
+   Funding agency: AICTE
+   Amount: ₹1,00,000
+   Status: Completed
+
+Other research support / collaborations published by KCE have involved organizations such as:
+
+* DRDO
+* AICTE
+* Ministry of Communications and IT
+* TNSCST
+* Texas Instruments
+* Analog Devices
+
+Research information can change, so current project status should be verified from the latest R&D announcements.
+
+==================================================
+22. INNOVATION / HACKATHONS / PROJECT ACTIVITIES
+================================================
+
+KCE promotes:
+
+* Innovation
+* Project development
+* Hackathons
+* Student projects
+* Research
+* Industry interaction
+* Technical competitions
+
+Published recent activities include:
+
+* Smart India Hackathon internal hackathon
+* MSME Idea Hackathon
+* Project Expo
+* International conferences
+* Technical symposiums
+* Department-level project activities
+
+==================================================
+23. CLUBS AND STUDENT ACTIVITIES
+================================
+
+Student organizations / activities published by KCE include:
+
+* NCC
+* NSS
+* Red Ribbon Club (RRC)
+* Youth Red Cross (YRC)
+* CCC
+* SCC
+* Eco Club
+* A.P.J. Abdul Kalam Memorial Club
+* Fine Arts Association
+* Citizen Club
+
+Professional societies include:
+
+* IEEE
+* ISTE
+* IEI
+* IETE
+* Institution-related technical/professional associations
+
+Technical clubs include:
+
+* Budding Engineers Club
+* Code Club
+* Multimedia Club
+* Project Club
+* Electronics Club
+* Science and Technology Club
+
+==================================================
+24. SCHOLARSHIPS
+================
+
+Scholarship opportunities published by KCE include:
+
+Government scholarship support:
+Students may receive guidance and assistance for eligible government scholarships.
+
+Management scholarships include:
+
+* Merit-based fee waiver
+* Sports-based fee waiver
+* Fee waiver for economically poor background
+
+Sports scholarships:
+Sports scholarship benefits may be provided based on sports merit.
+
+KCE also publishes:
+
+* King of Kings Award
+* Proficiency Award
+* Best Library User Award
+* Anna University rank-holder awards
+
+Scholarship eligibility, amount and availability can change.
+Students should verify the latest scholarship notification before applying.
+
+The official website states that KCE follows a no-donation / no-capitation policy.
+
+==================================================
+25. ALUMNI
+==========
+
+Alumni organization:
+Kings Munnaal Manavargal Sangam
+
+The Alumni Association was registered on:
+19 November 2007
+
+Purpose:
+
+* Connect alumni
+* Support the institution
+* Encourage interaction between alumni and institution
+* Develop synergistic plans
+* Add value to the institution and alumni community
+
+Vision:
+Support excellence in engineering education and quality research in science and technology.
+
+==================================================
+26. E-LEARNING AND DIGITAL RESOURCES
+====================================
+
+Students may have access to:
+
+* SWAYAM
+* NPTEL
+* IEEE resources
+* DELNET
+* National Digital Library
+* Springer resources
+* UGC resources
+* Anna University resources
+* AICTE resources
+* Library e-resources
+* Online journals
+* E-books
+* NPTEL videos
+
+==================================================
+27. PROFESSIONAL DEVELOPMENT
+============================
+
+KCE promotes:
+
+* Soft skills
+* Aptitude
+* Communication skills
+* Technical skills
+* Career guidance
+* Industry interaction
+* Industrial visits
+* Project development
+* Paper presentations
+* Technical symposiums
+* Workshops
+* FDPs
+* Conferences
+
+==================================================
+28. RECENT / CURRENT ANNOUNCEMENTS
+==================================
+
+Recent announcements published on the KCE website include:
+
+2026:
+
+* Smart India Hackathon 2026 internal hackathon
+* Induction Day 2026-27
+* FDP on Creating Campus Innovation Ecosystem
+* College Campus Tour
+* Admission Brochure 2026-27
+* MBA Admission Brochure 2026-27
+* Graduation Day 2026
+* Online Admission Registration for first-year UG and PG
+* International Conference organized by the Centre for Promotion of Research
+* AICTE feedback
+* Cyber Safety Guidelines
+
+Recent events also include:
+
+* IEEE-sponsored National Level 12 Hour Hackathon
+* MSME Idea Hackathon 5.0 related activity
+* International Conference
+* ISTE staff seminar
+* Project Expo
+* Technical symposiums
+* Placement drives
+
+IMPORTANT:
+Announcements and event dates are time-sensitive.
+CampusMate should not claim an event is upcoming or ongoing unless the knowledge base has a current date/status for it.
+
+==================================================
+29. NAAC / IQAC / QUALITY INFORMATION
+=====================================
+
+KCE publishes NAAC-related institutional information.
+
+NAAC criteria include:
+C1 — Curricular Aspects
+C2 — Teaching-Learning and Evaluation
+C3 — Research, Innovations and Extensions
+C4 — Infrastructure and Learning Resources
+C5 — Student Support and Progression
+C6 — Governance, Leadership and Management
+C7 — Institutional Values and Best Practices
+
+Published NAAC information covers areas such as:
+
+* Curriculum planning
+* Academic calendar
+* Course outcomes
+* Programme outcomes
+* Research
+* Research funding
+* Innovation ecosystem
+* Infrastructure
+* Sports facilities
+* ICT-enabled classrooms
+* Library automation
+* E-resources
+* IT infrastructure
+* Student support
+
+==================================================
+30. STUDENT SUPPORT
+===================
+
+Student support areas include:
+
+* Academic support
+* Library
+* Hostel
+* Transport
+* Health centre
+* Sports
+* Training and placement
+* Scholarships
+* Clubs
+* NCC
+* NSS
+* Research and innovation
+* Career guidance
+* Professional societies
+
+==================================================
+31. IMPORTANT STUDENT-HANDBOOK AREAS
+====================================
+
+The KCE Student Handbook includes information relating to:
+
+* Management
+* Programmes offered
+* Special features
+* Timetable
+* Heads of Departments
+* Professional societies
+* Scholarships
+* Code of conduct
+* Library
+* Hostel facilities
+* Transport
+* Campus amenities
+* Anna University regulations
+* Research and Development
+* NCC
+* NSS
+* Training and Placement
+* Sports and Games
+* Academic calendar
+* Ragging-related notices
+
+==================================================
+32. CAMPUS AMENITIES
+====================
+
+Campus amenities include:
+
+* Cafeteria / canteen
+* Health centre
+* Hostels
+* Library
+* Internet facilities
+* Sports facilities
+* Indoor stadium
+* Post office
+* Drinking water facilities
+* Power backup
+* Classrooms
+* Laboratories
+* Auditoriums
+* Department facilities
+
+==================================================
+33. CONTACT INFORMATION
+=======================
+
+College:
+Kings College of Engineering
+
+Address:
+Punalkulam, Near Thanjavur,
+Gandarvakottai Taluk,
+Pudukkottai District,
+Tamil Nadu – 613303.
+
+Phone:
++91-6380989024
+
+Email:
+[contact@kingsengg.edu.in](mailto:contact@kingsengg.edu.in)
+
+Website:
+[www.kingsengg.edu.in](http://www.kingsengg.edu.in)
+
+Admission enquiries:
++91-6380989024
+
+Information Centre:
+85/26, 3rd Cross,
+Arulanandha Nagar,
+VOC Nagar,
+Thanjavur – 613007,
+Tamil Nadu.
+
+==================================================
+34. CAMPUSMATE ANSWERING RULES
+==============================
+
+1. Answer clearly and directly.
+
+2. Prefer information from this knowledge base.
+
+3. Never invent information.
+
+4. If the requested information is not available, say:
+   "I couldn't find that information in the available KCE information."
+
+5. If appropriate, suggest:
+   "Please check the official KCE website or contact the college office."
+
+6. Do not confuse historical information with current information.
+
+7. Do not present historical placement statistics as current.
+
+8. Do not present old faculty/HOD information as current if newer information exists.
+
+9. For events, admissions, recruitment drives, academic calendars and other changing information, mention that students should verify the latest announcement.
+
+10. If the user asks about a department, provide the department's HOD, faculty, programme and laboratory information when available.
+
+11. If the user asks about a person's name, answer only if that person's information is available in this knowledge base.
+
+12. If the user asks "Who is the principal?", answer:
+    "The current Principal of Kings College of Engineering is Dr. J. Arputha Vijaya Selvi, B.E., M.E., Ph.D."
+
+13. If the user asks "Who is the CSE HOD?", answer:
+    "The current CSE HOD is Dr. S.M. Uma."
+
+14. If the user asks "What courses are offered?", list the UG, PG and PhD programmes from this knowledge base.
+
+15. If the user asks "What facilities are available?", mention relevant facilities such as library, laboratories, hostels, internet, sports, health centre, cafeteria, transport and student activities.
+
+16. If the user asks about placement, explain the role and training activities of the Training and Placement Cell. Do not promise a job, salary or placement percentage.
+
+17. If the user asks about fees and the exact current fee is not present in this knowledge base, do not guess the amount.
+
+18. If the user asks about admission procedures and the exact current procedure is not present, do not invent it. Direct the student to the latest admission announcement or college office.
+
+19. If the user asks for a current event/date and the information may have changed, advise checking the latest official announcement.
+
+20. Keep answers student-friendly and easy to understand.
+
+==================================================
+35. EXAMPLE QUESTIONS CAMPUSMATE SHOULD HANDLE
+==============================================
+
+College:
+
+* What is the full name of the college?
+* When was KCE established?
+* Where is KCE located?
+* Who founded KCE?
+* Is KCE autonomous?
+* Is KCE affiliated with Anna University?
+* Is KCE approved by AICTE?
+* Is KCE NAAC accredited?
+
+Principal / Administration:
+
+* Who is the principal?
+* Who is the CSE HOD?
+* Who is the ECE HOD?
+* Who is the Mechanical HOD?
+* Who is the Civil HOD?
+* Who is the EEE HOD?
+* Who is the Science and Humanities HOD?
+
+Courses:
+
+* What courses are offered?
+* What B.E courses are available?
+* What B.Tech courses are available?
+* What PG courses are available?
+* Does KCE offer MBA?
+* Does KCE offer PhD?
+* What is the intake for CSE?
+* When was IT started?
+
+CSE:
+
+* Who are the CSE faculty?
+* What labs are available in CSE?
+* Who is the CSE HOD?
+* What areas does CSE focus on?
+
+Library:
+
+* How many books are in the library?
+* Does KCE have IEEE access?
+* Does the library have NPTEL?
+* Does KCE have DELNET?
+* Is there an OPAC?
+* Are there department libraries?
+
+Hostel:
+
+* Is hostel available?
+* Are boys and girls hostels separate?
+* Is mess available?
+* Is there a gym?
+* Is there a reading room?
+* Is medical support available?
+
+Placement:
+
+* Does KCE have a placement cell?
+* Who heads Training and Placement?
+* What training is given?
+* Is aptitude training provided?
+* Are soft skills taught?
+* What companies have conducted recent drives?
+
+Research:
+
+* Does KCE have research centres?
+* Which departments have Anna University research centres?
+* What funded projects are available?
+* Does KCE support innovation?
+* Does KCE conduct hackathons?
+
+Campus:
+
+* How large is the campus?
+* Is Wi-Fi available?
+* Is there a health centre?
+* Is there a canteen?
+* What sports facilities are available?
+* Is transport available?
+
+Student activities:
+
+* Does KCE have NCC?
+* Does KCE have NSS?
+* What clubs are available?
+* Are there technical clubs?
+* Does KCE have IEEE/ISTE/IEI/IETE activities?
+
+Scholarships:
+
+* Does KCE offer scholarships?
+* Are sports scholarships available?
+* Are merit scholarships available?
+* Is there a fee waiver?
+
+Contact:
+plllll
+* What is the college phone number?
+* What is the official email?
+* Where is the college located?
+* What is the official website?
+
+==================================================
+END OF KCE MASTER KNOWLEDGE BASE
+================================
