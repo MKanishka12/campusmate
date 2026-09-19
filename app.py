@@ -393,7 +393,48 @@ question clearly and accurately.
 
     response = llm.invoke(prompt)
 
-    return response.content
+    # --------------------------------------------------------
+    # Convert Gemini response into plain text
+    # --------------------------------------------------------
+
+    content = response.content
+
+    if isinstance(content, str):
+        return content
+
+    if isinstance(content, list):
+
+        text_parts = []
+
+        for item in content:
+
+            if isinstance(item, str):
+                text_parts.append(item)
+
+            elif isinstance(item, dict):
+
+                if "text" in item:
+                    text_parts.append(
+                        str(item["text"])
+                    )
+
+                elif "content" in item:
+                    text_parts.append(
+                        str(item["content"])
+                    )
+
+        if text_parts:
+            return "\n".join(text_parts)
+
+    if isinstance(content, dict):
+
+        if "text" in content:
+            return str(content["text"])
+
+        if "content" in content:
+            return str(content["content"])
+
+    return str(content)
 
 
 # ============================================================
