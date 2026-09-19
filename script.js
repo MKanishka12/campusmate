@@ -256,9 +256,7 @@ async function getBotResponse(userText) {
     try {
 
         const response =
-            await fetch(
-                "http://127.0.0.1:5000/chat",
-                {
+            await fetch("https://campusmate-tm5h.onrender.com/chat", {
                     method: "POST",
 
                     headers: {
