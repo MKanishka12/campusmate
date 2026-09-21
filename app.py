@@ -36,7 +36,7 @@ else:
 
 
 # ============================================================
-# 1. LOAD COLLEGE KNOWLEDGE BASE
+# LOAD COLLEGE KNOWLEDGE BASE
 # ============================================================
 
 KNOWLEDGE_FILE = "data/college_info.txt"
@@ -58,7 +58,7 @@ except Exception as e:
 
 
 # ============================================================
-# 2. GOOGLE GEMINI
+# GEMINI
 # ============================================================
 
 llm = ChatGoogleGenerativeAI(
@@ -69,100 +69,36 @@ llm = ChatGoogleGenerativeAI(
 
 
 # ============================================================
-# 3. SYSTEM PROMPT
-# ============================================================
-
-SYSTEM_PROMPT = """
-You are CampusMate, a student information assistant for
-Kings College of Engineering (KCE).
-
-IMPORTANT RULES:
-
-1. Answer ONLY using the supplied KCE knowledge base.
-
-2. Never guess or invent information.
-
-3. If the requested information is not present in the
-knowledge base, say exactly:
-
-"I couldn't find that information in the current CampusMate knowledge base."
-
-4. Do not use unrelated information merely because some
-words are similar.
-
-5. For department questions, answer using information
-belonging to that specific department.
-
-6. For faculty questions, provide faculty information from
-the requested department only.
-
-7. For facility questions, list the relevant facilities
-instead of giving only a general statement.
-
-8. If the user asks for a list, provide the complete list
-available in the knowledge base.
-
-9. If information is historical or year-specific, clearly
-mention the year.
-
-10. Keep answers simple, clear and student-friendly.
-
-11. For location or address questions, give the complete
-location available in the knowledge base, including
-district, state and PIN code when available.
-
-12. Do not answer an unknown question with a greeting.
-
-KCE KNOWLEDGE BASE:
-
-""" + college_info
-
-
-# ============================================================
-# 4. QUERY EXPANSION
+# BASIC QUERY EXPANSION
 # ============================================================
 
 def expand_query(question):
 
     q = question.lower().strip()
 
-    # --------------------------------------------------------
-    # Department abbreviations
-    # --------------------------------------------------------
-
     replacements = {
         "cse": "computer science and engineering",
         "ece": "electronics and communication engineering",
         "eee": "electrical and electronics engineering",
         "mech": "mechanical engineering",
-        "civil": "civil engineering",
         "aids": "artificial intelligence and data science",
         "ai&ds": "artificial intelligence and data science",
-        "ai ds": "artificial intelligence and data science",
         "it": "information technology",
-        "s&h": "science and humanities",
-        "s and h": "science and humanities"
+        "s&h": "science and humanities"
     }
-
-    # --------------------------------------------------------
-    # Replace complete words
-    # --------------------------------------------------------
 
     for short_name, full_name in replacements.items():
 
         q = re.sub(
-            r'\b' + re.escape(short_name) + r'\b',
+            r"\b" + re.escape(short_name) + r"\b",
             full_name,
             q
         )
 
-    # --------------------------------------------------------
-    # Department / Course questions
-    # --------------------------------------------------------
+    # Common meaning expansions
+    extra_terms = []
 
     if any(word in q for word in [
-        "department",
-        "departments",
         "course",
         "courses",
         "program",
@@ -171,120 +107,64 @@ def expand_query(question):
         "degrees",
         "offered"
     ]):
-
-        q += """
-        courses offered departments academic programs
-        undergraduate UG courses
-        postgraduate PG courses
-        Civil Engineering
-        Computer Science and Engineering
-        Electronics and Communication Engineering
-        Electrical and Electronics Engineering
-        Mechanical Engineering
-        Artificial Intelligence and Data Science
-        Information Technology
-        Science and Humanities
-        MBA
-        M.E
-        M.Tech
-        B.E
-        B.Tech
-        """
-
-    # --------------------------------------------------------
-    # HOD questions
-    # --------------------------------------------------------
-
-    if any(word in q for word in [
-        "hod",
-        "head of the department",
-        "head of department"
-    ]):
-
-        q += """
-        Head of the Department HOD
-        department head
-        current HOD
-        """
-
-    # --------------------------------------------------------
-    # Faculty / Staff questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "courses",
+            "academic programs",
+            "departments",
+            "undergraduate",
+            "postgraduate",
+            "B.E",
+            "B.Tech",
+            "M.E",
+            "M.Tech",
+            "MBA"
+        ])
 
     if any(word in q for word in [
         "faculty",
         "faculties",
-        "staff",
+        "teacher",
+        "teachers",
         "professor",
-        "teachers"
+        "staff"
     ]):
-
-        q += """
-        faculty members
-        teaching staff
-        professors
-        associate professors
-        assistant professors
-        department faculty
-        """
-
-    # --------------------------------------------------------
-    # Hostel questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "faculty members",
+            "teaching staff",
+            "professors",
+            "associate professors",
+            "assistant professors"
+        ])
 
     if "hostel" in q:
-
-        q += """
-        boys hostel
-        girls hostel
-        hostel facilities
-        rooms
-        mess
-        study table
-        chair
-        shelf
-        power
-        reading room
-        recreation hall
-        gym
-        sports
-        medical dispensary
-        purified water
-        bathrooms
-        """
-
-    # --------------------------------------------------------
-    # Library questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "hostel facilities",
+            "boys hostel",
+            "girls hostel",
+            "mess",
+            "rooms",
+            "reading room",
+            "gym"
+        ])
 
     if any(word in q for word in [
         "library",
+        "book",
         "books",
         "journal",
         "journals",
         "opac"
     ]):
-
-        q += """
-        central library
-        library facilities
-        books titles volumes
-        CD-ROMs
-        journals
-        magazines
-        newspapers
-        DELNET
-        National Digital Library
-        IEEE
-        AICTE e-resources
-        NPTEL
-        OPAC
-        reading room
-        """
-
-    # --------------------------------------------------------
-    # Placement questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "central library",
+            "library facilities",
+            "books",
+            "journals",
+            "magazines",
+            "OPAC",
+            "DELNET",
+            "NPTEL"
+        ])
 
     if any(word in q for word in [
         "placement",
@@ -294,113 +174,141 @@ def expand_query(question):
         "company",
         "companies"
     ]):
-
-        q += """
-        Training and Placement Cell
-        campus recruitment
-        career guidance
-        aptitude training
-        technical preparation
-        soft skills
-        industry interaction
-        recruitment drives
-        """
-
-    # --------------------------------------------------------
-    # Scholarship questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "Training and Placement Cell",
+            "campus recruitment",
+            "career guidance",
+            "aptitude training",
+            "technical preparation",
+            "soft skills"
+        ])
 
     if any(word in q for word in [
         "scholarship",
         "scholarships",
         "fee waiver",
-        "award",
         "financial"
     ]):
-
-        q += """
-        government scholarship
-        management scholarship
-        merit based fee waiver
-        sports based fee waiver
-        economically poor background
-        sports scholarship
-        King of Kings Award
-        Proficiency Award
-        Best Library User Award
-        Anna University rank holder
-        """
-
-    # --------------------------------------------------------
-    # Location / Address questions
-    # --------------------------------------------------------
+        extra_terms.extend([
+            "government scholarship",
+            "management scholarship",
+            "merit based fee waiver",
+            "sports scholarship",
+            "financial assistance"
+        ])
 
     if any(word in q for word in [
         "location",
         "located",
-        "where is",
-        "where",
         "address",
-        "place",
+        "where",
         "situated",
-        "campus location",
-        "college address",
-        "college location"
+        "place",
+        "campus"
     ]):
+        extra_terms.extend([
+            "college location",
+            "college address",
+            "campus location",
+            "Punalkulam",
+            "Thanjavur",
+            "Pudukkottai",
+            "Tamil Nadu",
+            "613303"
+        ])
 
-        q += """
-        college location
-        campus location
-        college address
-        KCE address
-        Kings College of Engineering location
-        Kings College of Engineering address
-        Punalkulam
-        Near Thanjavur
-        Gandarvakottai Taluk
-        Pudukkottai District
-        Tamil Nadu
-        613303
-        Thanjavur New Bus Stand
-        Pudukkottai Highway
-        """
+    if extra_terms:
+        q += " " + " ".join(extra_terms)
 
     return q
 
 
 # ============================================================
-# 5. CREATE GEMINI QUESTION
+# FIND RELEVANT KNOWLEDGE
 # ============================================================
 
-def ask_gemini(user_question):
+def find_relevant_context(question, max_sections=5):
 
-    expanded_question = expand_query(user_question)
+    if not college_info:
+        return ""
 
-    prompt = f"""
-{SYSTEM_PROMPT}
+    expanded_query = expand_query(question)
 
-STUDENT QUESTION:
+    # Remove very common words
+    stop_words = {
+        "the", "is", "are", "was", "were", "what",
+        "where", "who", "how", "when", "why",
+        "does", "do", "can", "could", "please",
+        "tell", "me", "about", "for", "and",
+        "or", "of", "to", "in", "on", "a", "an",
+        "college", "kce"
+    }
 
-{user_question}
+    query_words = set(
+        word for word in re.findall(
+            r"[a-zA-Z0-9&.-]+",
+            expanded_query.lower()
+        )
+        if len(word) > 2 and word not in stop_words
+    )
 
-ADDITIONAL SEARCH TERMS:
+    # Split knowledge base into useful blocks.
+    # Blank lines are treated as section boundaries.
+    sections = re.split(r"\n\s*\n", college_info)
 
-{expanded_question}
+    scored_sections = []
 
-Using ONLY the KCE knowledge base above, answer the student's
-question clearly and accurately.
-"""
+    for section in sections:
 
-    response = llm.invoke(prompt)
+        section_clean = section.strip()
 
-    # --------------------------------------------------------
-    # Convert Gemini response into plain text
-    # --------------------------------------------------------
+        if not section_clean:
+            continue
+
+        section_lower = section_clean.lower()
+
+        score = 0
+
+        for word in query_words:
+
+            if word in section_lower:
+                score += 1
+
+                # Give extra weight to exact word repetition
+                occurrences = section_lower.count(word)
+
+                if occurrences > 1:
+                    score += min(occurrences - 1, 3)
+
+        if score > 0:
+            scored_sections.append(
+                (score, section_clean)
+            )
+
+    # Highest relevance first
+    scored_sections.sort(
+        key=lambda item: item[0],
+        reverse=True
+    )
+
+    selected = [
+        section
+        for score, section in scored_sections[:max_sections]
+    ]
+
+    return "\n\n".join(selected)
+
+
+# ============================================================
+# GEMINI RESPONSE NORMALIZER
+# ============================================================
+
+def normalize_response(response):
 
     content = response.content
 
     if isinstance(content, str):
-        return content
+        return content.strip()
 
     if isinstance(content, list):
 
@@ -414,31 +322,115 @@ question clearly and accurately.
             elif isinstance(item, dict):
 
                 if "text" in item:
-                    text_parts.append(
-                        str(item["text"])
-                    )
+                    text_parts.append(str(item["text"]))
 
                 elif "content" in item:
-                    text_parts.append(
-                        str(item["content"])
-                    )
+                    text_parts.append(str(item["content"]))
 
         if text_parts:
-            return "\n".join(text_parts)
+            return "\n".join(text_parts).strip()
 
     if isinstance(content, dict):
 
         if "text" in content:
-            return str(content["text"])
+            return str(content["text"]).strip()
 
         if "content" in content:
-            return str(content["content"])
+            return str(content["content"]).strip()
 
-    return str(content)
+    return str(content).strip()
 
 
 # ============================================================
-# 6. FRONTEND ROUTES
+# DIRECT KNOWLEDGE BASE FALLBACK
+# ============================================================
+
+def direct_knowledge_answer(question):
+
+    context = find_relevant_context(
+        question,
+        max_sections=3
+    )
+
+    if not context:
+        return None
+
+    return context
+
+
+# ============================================================
+# ASK GEMINI
+# ============================================================
+
+def ask_gemini(user_question):
+
+    relevant_context = find_relevant_context(
+        user_question,
+        max_sections=5
+    )
+
+    if not relevant_context:
+
+        return (
+            "I couldn't find that information in the current "
+            "CampusMate knowledge base."
+        )
+
+    prompt = f"""
+You are CampusMate, a student information assistant for
+Kings College of Engineering (KCE).
+
+Answer ONLY using the information provided in the
+KNOWLEDGE CONTEXT below.
+
+IMPORTANT RULES:
+
+1. Never invent information.
+
+2. Do not use outside knowledge.
+
+3. If the answer is not supported by the context, say exactly:
+
+"I couldn't find that information in the current CampusMate knowledge base."
+
+4. If the user asks for a list, provide all relevant items
+available in the supplied context.
+
+5. For department questions, use only the relevant department
+information.
+
+6. For faculty questions, provide faculty information from
+the relevant department when available.
+
+7. For location questions, provide the complete location
+available in the context.
+
+8. Keep the answer simple and student-friendly.
+
+9. Do not mention the internal knowledge base or retrieval
+process unless necessary.
+
+KNOWLEDGE CONTEXT:
+------------------
+
+{relevant_context}
+
+------------------
+
+STUDENT QUESTION:
+
+{user_question}
+
+Give a clear answer.
+"""
+
+    response = llm.invoke(prompt)
+
+    return normalize_response(response)
+
+
+# ============================================================
+# FRONTEND ROUTES
 # ============================================================
 
 @app.route("/")
@@ -478,7 +470,7 @@ def assets(filename):
 
 
 # ============================================================
-# 7. CHAT API
+# CHAT API
 # ============================================================
 
 @app.route("/chat", methods=["POST"])
@@ -508,7 +500,8 @@ def chat():
             "answer": "Please ask a valid question."
         }), 400
 
-    print("\nUSER QUESTION:")
+    print("\n========================================")
+    print("USER QUESTION:")
     print(user_message)
 
     expanded_question = expand_query(user_message)
@@ -516,12 +509,22 @@ def chat():
     print("\nEXPANDED QUERY:")
     print(expanded_question)
 
+    relevant_context = find_relevant_context(
+        user_message,
+        max_sections=5
+    )
+
+    print("\nRELEVANT CONTEXT CHARACTERS:")
+    print(len(relevant_context))
+
     try:
 
         answer = ask_gemini(user_message)
 
         print("\nCAMPUSMATE ANSWER:")
         print(answer)
+
+        print("========================================\n")
 
         return jsonify({
             "answer": answer
@@ -534,9 +537,9 @@ def chat():
         print("\nCHAT ERROR:")
         print(error_message)
 
-        # ----------------------------------------------------
-        # Gemini quota error
-        # ----------------------------------------------------
+        # ====================================================
+        # GEMINI QUOTA EXHAUSTED
+        # ====================================================
 
         if (
             "429" in error_message
@@ -544,15 +547,35 @@ def chat():
             or "quota" in error_message.lower()
         ):
 
+            print(
+                "Gemini quota exhausted. "
+                "Using direct knowledge-base fallback."
+            )
+
+            fallback_answer = direct_knowledge_answer(
+                user_message
+            )
+
+            if fallback_answer:
+
+                return jsonify({
+                    "answer":
+                    "Gemini is temporarily unavailable, "
+                    "so here is the relevant information from "
+                    "the CampusMate knowledge base:\n\n"
+                    + fallback_answer
+                })
+
             return jsonify({
                 "answer":
-                "⚠️ CampusMate's Gemini API quota has been exhausted. "
-                "Please try again later or use another API key."
-            }), 429
+                "Gemini is temporarily unavailable and "
+                "I couldn't find a direct answer in the "
+                "CampusMate knowledge base."
+            })
 
-        # ----------------------------------------------------
-        # API key error
-        # ----------------------------------------------------
+        # ====================================================
+        # API KEY ERROR
+        # ====================================================
 
         if (
             "API key" in error_message
@@ -562,29 +585,32 @@ def chat():
 
             return jsonify({
                 "answer":
-                "⚠️ CampusMate could not connect to Gemini. "
+                "CampusMate could not connect to Gemini. "
                 "Please check the API key configuration."
             }), 500
 
-        # ----------------------------------------------------
-        # Other errors
-        # ----------------------------------------------------
+        # ====================================================
+        # OTHER ERROR
+        # ====================================================
+
+        print("Unexpected error occurred.")
 
         return jsonify({
             "answer":
-            "Sorry, something went wrong while processing your question."
+            "Sorry, something went wrong while processing "
+            "your question."
         }), 500
 
 
 # ============================================================
-# 8. START SERVER
+# START SERVER
 # ============================================================
 
 if __name__ == "__main__":
 
     print(
-        "\n🚀 CampusMate Backend Server Running on "
-        "http://127.0.0.1:5000\n"
+        "\nCampusMate Backend Server Running on "
+        "http://127.0.0.1:5000"
     )
 
     app.run(
