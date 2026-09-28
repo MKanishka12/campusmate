@@ -4,104 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CampusMate | College Information Assistant</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>CampusMate | Intelligent Campus Companion</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-<div class="app">
+<div class="app-shell">
 
     <!-- ================= SIDEBAR ================= -->
-
     <aside class="sidebar">
 
         <div class="brand">
 
             <div class="brand-logo">
-                <img src="assets/kings.jpeg" alt="Kings College Logo">
+                <img src="/assets/kings.jpeg" alt="KCE Logo">
             </div>
 
-            <div>
-                <h1>CampusMate</h1>
-                <span>College Assistant</span>
+            <div class="brand-text">
+                <h2>CampusMate</h2>
+                <span>Intelligent Campus Companion</span>
             </div>
 
         </div>
-
 
         <div class="sidebar-divider"></div>
 
+        <p class="sidebar-label">EXPLORE</p>
 
-        <div class="sidebar-title">
-            EXPLORE
-        </div>
-
-
-        <button class="side-option active">
-            <span>💬</span>
+        <button class="side-item active" data-question="Tell me about Kings College of Engineering">
+            <span class="side-icon">⌂</span>
             <span>Campus Assistant</span>
         </button>
 
-        <button class="side-option" onclick="askQuickQuestion('What courses are offered?')">
-            <span>🎓</span>
-            <span>Courses</span>
+        <button class="side-item" data-question="What courses and departments are available?">
+            <span class="side-icon">▦</span>
+            <span>Courses & Departments</span>
         </button>
 
-        <button class="side-option" onclick="askQuickQuestion('Tell me about the college library.')">
-            <span>📚</span>
+        <button class="side-item" data-question="Tell me about the library">
+            <span class="side-icon">▤</span>
             <span>Library</span>
         </button>
 
-        <button class="side-option" onclick="askQuickQuestion('Tell me about placement opportunities.')">
-            <span>💼</span>
+        <button class="side-item" data-question="Tell me about placements">
+            <span class="side-icon">↗</span>
             <span>Placements</span>
         </button>
 
-        <button class="side-option" onclick="askQuickQuestion('Does the college provide hostel facilities?')">
-            <span>🏠</span>
+        <button class="side-item" data-question="Tell me about hostel facilities">
+            <span class="side-icon">⌂</span>
             <span>Hostel</span>
         </button>
 
-
         <div class="sidebar-bottom">
 
-            <div class="college-mini">
-
-                <div class="mini-logo">
-                    <img src="assets/kings.jpeg" alt="College">
-                </div>
+            <div class="status-card">
+                <span class="status-dot"></span>
 
                 <div>
-                    <strong>Kings College</strong>
-                    <span>of Engineering</span>
+                    <strong>CampusMate Online</strong>
+                    <small>Ready to help you</small>
                 </div>
-
             </div>
+
+            <p class="developer-credit">
+                Developed by <strong>Kanishka</strong>
+            </p>
 
         </div>
 
     </aside>
 
 
-    <!-- ================= MAIN AREA ================= -->
-
+    <!-- ================= MAIN ================= -->
     <main class="main-content">
 
-
-        <!-- TOP HEADER -->
-
+        <!-- TOP BAR -->
         <header class="topbar">
 
             <div class="mobile-brand">
 
-                <img src="assets/kings.jpeg" alt="College">
+                <img src="/assets/kings.jpeg" alt="KCE">
 
                 <div>
                     <strong>CampusMate</strong>
@@ -110,78 +100,239 @@
 
             </div>
 
-
             <div class="topbar-right">
 
                 <div class="online-status">
-
-                    <span class="online-dot"></span>
-
-                    <span>Assistant Online</span>
-
+                    <span></span>
+                    Assistant Online
                 </div>
+
+                <button id="clearChat" class="clear-btn">
+                    Clear Chat
+                </button>
 
             </div>
 
         </header>
 
 
-        <!-- ================= CHAT AREA ================= -->
+        <!-- CHAT AREA -->
+        <section class="chat-wrapper">
 
-        <section class="chat-area" id="chat-window">
+            <!-- WELCOME -->
+            <div id="welcomeScreen" class="welcome-screen">
 
+                <div class="hero-orb">
 
-            <!-- WELCOME SCREEN -->
+                    <div class="orb-glow"></div>
 
-            <div class="welcome-screen">
+                    <img src="/assets/kings.jpeg" alt="Kings College of Engineering">
 
-                <div class="welcome-logo">
-
-                    <img src="assets/kings.jpeg" alt="Kings College Logo">
-
-                    <span class="sparkle sparkle-one">✦</span>
-                    <span class="sparkle sparkle-two">✦</span>
+                    <span class="orb-sparkle sparkle-one">✦</span>
+                    <span class="orb-sparkle sparkle-two">✦</span>
+                    <span class="orb-sparkle sparkle-three">✧</span>
 
                 </div>
 
 
                 <div class="welcome-badge">
-                    ✨ SMART CAMPUS ASSISTANT
+                    ✦ SMART CAMPUS ASSISTANT
                 </div>
 
 
-                <h2>
+                <h1>
                     Hello! I'm <span>CampusMate.</span>
-                </h2>
+                </h1>
 
 
                 <p class="welcome-description">
-
-                    Your smart companion for exploring
+                    Your intelligent companion for discovering
                     <strong>Kings College of Engineering.</strong>
-
-                    Ask questions and get quick information
-                    about the college, departments, facilities
-                    and more.
-
+                    Ask me about academics, departments, library,
+                    hostel, placements and more.
                 </p>
 
 
-                <div class="welcome-features">
+                <!-- FEATURE STRIP -->
+                <div class="feature-strip">
 
-                    <div>
-                        <span>⚡</span>
-                        <p>Quick Answers</p>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+
+                        <div>
+                            <strong>Quick Answers</strong>
+                            <span>Get information instantly</span>
+                        </div>
                     </div>
 
-                    <div>
-                        <span>🎓</span>
-                        <p>College Information</p>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">◈</div>
+
+                        <div>
+                            <strong>College Knowledge</strong>
+                            <span>Built for KCE students</span>
+                        </div>
                     </div>
 
-                    <div>
-                        <span>🔎</span>
-                        <p>Smart Search</p>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">⌕</div>
+
+                        <div>
+                            <strong>Smart Search</strong>
+                            <span>Ask naturally</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK QUESTIONS -->
+                <div class="quick-section">
+
+                    <div class="quick-heading">
+                        <span>What would you like to discover?</span>
+                    </div>
+
+
+                    <div class="suggestions-grid">
+
+                        <button class="suggestion-card"
+                                data-question="Where is Kings College of Engineering located?">
+
+                            <div class="suggestion-icon location-icon">
+                                ◎
+                            </div>
+
+                            <div>
+                                <strong>College Location</strong>
+                                <span>Campus address & location</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="What courses and departments are available?">
+
+                            <div class="suggestion-icon course-icon">
+                                ◫
+                            </div>
+
+                            <div>
+                                <strong>Courses & Departments</strong>
+                                <span>Explore academic programs</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="Tell me about the central library">
+
+                            <div class="suggestion-icon library-icon">
+                                ▤
+                            </div>
+
+                            <div>
+                                <strong>Library</strong>
+                                <span>Resources & facilities</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="How can I contact the college?">
+
+                            <div class="suggestion-icon contact-icon">
+                                ◉
+                            </div>
+
+                            <div>
+                                <strong>Contact</strong>
+                                <span>Important contact details</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="Tell me about hostel facilities">
+
+                            <div class="suggestion-icon hostel-icon">
+                                ⌂
+                            </div>
+
+                            <div>
+                                <strong>Hostel</strong>
+                                <span>Accommodation facilities</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="Tell me about training and placements">
+
+                            <div class="suggestion-icon placement-icon">
+                                ↗
+                            </div>
+
+                            <div>
+                                <strong>Placements</strong>
+                                <span>Training & placement</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="Who is the HOD of CSE and who are the faculty members?">
+
+                            <div class="suggestion-icon faculty-icon">
+                                ◌
+                            </div>
+
+                            <div>
+                                <strong>Faculty</strong>
+                                <span>Faculty & academic roles</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
+
+                        <button class="suggestion-card"
+                                data-question="What scholarships are available?">
+
+                            <div class="suggestion-icon scholarship-icon">
+                                ★
+                            </div>
+
+                            <div>
+                                <strong>Scholarships</strong>
+                                <span>Financial support information</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </button>
+
                     </div>
 
                 </div>
@@ -189,223 +340,46 @@
             </div>
 
 
+            <!-- MESSAGES WILL APPEAR HERE -->
+            <div id="chatMessages" class="chat-messages"></div>
+
         </section>
 
 
-        <!-- ================= SUGGESTIONS ================= -->
+        <!-- INPUT AREA -->
+        <footer class="input-area">
 
-        <section class="suggestions-section">
+            <div class="input-container">
 
-            <div class="section-heading">
-
-                <div>
-                    <span class="small-label">GET STARTED</span>
-                    <h3>What would you like to know?</h3>
+                <div class="input-icon">
+                    ✦
                 </div>
-
-            </div>
-
-
-            <div class="suggestions-grid">
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="Where is the college located?"
-                >
-
-                    <div class="suggestion-icon location">
-                        📍
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>College Location</strong>
-                        <span>Find address & location</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="What courses are offered?"
-                >
-
-                    <div class="suggestion-icon course">
-                        🎓
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Courses & Departments</strong>
-                        <span>Explore academic programs</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="Does the college have a library?"
-                >
-
-                    <div class="suggestion-icon library">
-                        📚
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Library</strong>
-                        <span>Books & learning resources</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="How can I contact the college?"
-                >
-
-                    <div class="suggestion-icon contact">
-                        ☎
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Contact</strong>
-                        <span>Phone, email & details</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="Does the college provide hostel facilities?"
-                >
-
-                    <div class="suggestion-icon hostel">
-                        🏠
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Hostel Facilities</strong>
-                        <span>Accommodation information</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="Tell me about the placement opportunities at the college."
-                >
-
-                    <div class="suggestion-icon placement">
-                        💼
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Placements</strong>
-                        <span>Career opportunities</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="Who are the faculty members at the college?"
-                >
-
-                    <div class="suggestion-icon faculty">
-                        👨‍🏫
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Faculty</strong>
-                        <span>Faculty information</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-                <button
-                    class="suggestion-card"
-                    data-question="What scholarships are available for students?"
-                >
-
-                    <div class="suggestion-icon scholarship">
-                        💰
-                    </div>
-
-                    <div class="suggestion-content">
-                        <strong>Scholarships</strong>
-                        <span>Student financial support</span>
-                    </div>
-
-                    <span class="arrow">→</span>
-
-                </button>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= INPUT ================= -->
-
-        <div class="input-wrapper">
-
-            <div class="input-box">
-
-                <span class="input-icon">✦</span>
 
                 <input
                     type="text"
-                    id="user-input"
+                    id="userInput"
                     placeholder="Ask CampusMate anything..."
                     autocomplete="off"
                 >
 
-                <button id="send-btn" aria-label="Send message">
-                    <span>➤</span>
+                <button id="sendButton" class="send-button" aria-label="Send">
+                    <span>↑</span>
                 </button>
 
             </div>
 
-
-            <button id="clear-btn" class="clear-button">
-                ↻ Clear chat
-            </button>
-
-
             <p class="input-note">
-                CampusMate can answer questions from the college knowledge base.
+                CampusMate answers using the official college knowledge base.
             </p>
 
-        </div>
-
+        </footer>
 
     </main>
 
 </div>
 
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 
 </body>
 </html>
