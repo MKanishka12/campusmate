@@ -1686,3 +1686,27 @@ input:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Developer Credit */
+.developer-credit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.4px;
+}
+
+.developer-credit strong {
+    color: #e9bd58;
+    font-weight: 600;
+}
+
+.developer-role {
+    color: #ffdc8a;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+}
